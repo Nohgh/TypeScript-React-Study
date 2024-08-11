@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
+import Standby from './page/Standby/Standby'
 import './App.css'
 
-// import {Board,Mypage,Home} from "./page/pageroot"
 
 import Home from './page/Home/Home'
 const Board=lazy(async()=>await import('./page/Board/Board'));
@@ -16,8 +16,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/board' element={<Board/>}></Route>
-          <Route path='/mypage' element={<Mypage/>}></Route>
+          <Route path='/board' 
+            element={
+            <Suspense fallback={<Standby/>}>
+              <Board/>
+            </Suspense>}>
+          </Route>
+          <Route path='/mypage' 
+            element={
+            <Suspense fallback={<Standby/>}>
+              <Mypage/>
+            </Suspense>}>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

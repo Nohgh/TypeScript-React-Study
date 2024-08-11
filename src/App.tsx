@@ -1,6 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { lazy } from 'react'
 import './App.css'
-import {Board,Mypage,Home} from "./page/pageroot"
+
+// import {Board,Mypage,Home} from "./page/pageroot"
+
+import Home from './page/Home/Home'
+const Board=lazy(async()=>await import('./page/Board/Board'));
+const Mypage=lazy(async()=>await import('./page/Mypage/Mypage'))
+
 function App() {
  
 

@@ -5,6 +5,7 @@ const UseRefTest = () => {
     const focusOnInput=()=>{
         inputRef.current?.focus();
     }
+    
   return (
     <div>
         <button onClick={focusOnInput}>click</button>

@@ -1,9 +1,10 @@
-import UseRefTest from "../../component/Test/UseRefTest"
+import TsTest from "../../component/Test/TsTest"
 
 const Home = () => {
+
   return (
     <>
-       <UseRefTest/>
+       <TsTest/>
     </>
  
   )

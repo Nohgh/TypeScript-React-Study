@@ -1,17 +1,9 @@
 const TsTest = () => {
-    interface userI{
-        id:number;
-        name:string
-    }
-    //TODO:todo 형광펜
-    const users:userI[] = [
-        { id: 1, name: 'John' },
-        { id: 2, name: 'Jane' },
-        { id: 3, name: 'Alice' }
-      ];
-    const user:userI|undefined=users.find((u)=>{return u.name==='Jane'});     
+    const arr=[1,2,3];
+    const arr2=arr.join('-')
+    console.log(arr)
     return (
-        <div>{user?user.id:"none"}</div>
+        <div>{arr2}</div>
     )
 }
 //

@@ -1,6 +1,11 @@
+import { Outlet } from "react-router"
+
 const Board = () => {
   return (
-    <div>Board</div>
+    <>
+      <div>게시판</div>
+      <Outlet/>
+    </>
   )
 }
 

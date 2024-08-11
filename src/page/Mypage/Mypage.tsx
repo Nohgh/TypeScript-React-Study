@@ -1,6 +1,11 @@
+import { Outlet } from "react-router"
+
 const Mypage = () => {
   return (
-    <div>Mypage</div>
+    <>
+      <div>Mypage</div>
+      <Outlet/>
+    </>
   )
 }
 

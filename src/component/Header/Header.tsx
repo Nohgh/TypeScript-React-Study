@@ -1,6 +1,14 @@
+import styled from "styled-components"
+
 const Header = () => {
+  
+  const HeaderLine=styled.div`
+  width: 100vw;
+  height: 30px;
+  border-bottom:1px solid black;`
+
   return (
-    <div style={{"width":"100vh" ,"height":"30px","backgroundColor":"lightblue"}}>Header</div>
+    <HeaderLine>Header</HeaderLine>
   )
 }
 

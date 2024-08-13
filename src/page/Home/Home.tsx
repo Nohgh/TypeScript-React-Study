@@ -1,10 +1,10 @@
-import TestUseMemo from "../../component/Test/TestUseMemo"
+import StyledComponent from "../../component/Test/StyledComponent"
 
 const Home = () => {
 
   return (
     <>
-       <TestUseMemo/>
+       <StyledComponent/>
     </>
  
   )

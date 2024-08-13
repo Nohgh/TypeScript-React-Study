@@ -1,10 +1,10 @@
-import TsTest from "../../component/Test/TsTest"
+import TestUseMemo from "../../component/Test/TestUseMemo"
 
 const Home = () => {
 
   return (
     <>
-       <TsTest/>
+       <TestUseMemo/>
     </>
  
   )

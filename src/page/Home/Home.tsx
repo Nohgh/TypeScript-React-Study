@@ -1,10 +1,10 @@
-import StyledComponent from "../../component/Test/StyledComponent"
+import UseMediaQuery from "../../component/Test/UseMediaQuery"
 
 const Home = () => {
 
   return (
     <>
-       <StyledComponent/>
+       <UseMediaQuery/>
     </>
  
   )

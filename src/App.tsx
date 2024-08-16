@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import './App.css'
-import GlobalStyles from './GlobalStyles'
+import './firebase-messaging-sw.js'
 
+import GlobalStyles from './GlobalStyles'
 import Standby from './page/Standby/Standby'
 import Home from './page/Home/Home'
 import Footer from './component/Footer/Footer'

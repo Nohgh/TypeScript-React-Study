@@ -1,4 +1,4 @@
-import useBreackPoint from "../../hooks/useBreakPoint"
+import useBreackPoint from "../../hooks/useBreakPoint.ts"
 
 const UseMediaQuery = () => {
     const {isPc,isTablet,isMobile}=useBreackPoint();

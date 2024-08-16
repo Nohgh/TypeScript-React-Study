@@ -19,21 +19,26 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const messaging=getMessaging(app);
+
 // const analytics = getAnalytics(app);
 // console.log(analytics)
-const messaging=getMessaging(app);
 async function requestPermission(){
-    console.log("권한 요청중")
+    console.log("권한 요청중");
+
+    //권한 요청
     const permission = await Notification.requestPermission();
     if (permission === "denied") {
       console.log("알림 권한 허용 안됨");
       return;
     }
-  
+    //else
     console.log("알림 권한이 허용됨");
+
     const token = await getToken(messaging, {
         vapidKey: import.meta.env.VITE_FIREBASE_VAPID_KEY,
       });
+      
     if(token)console.log("token is here ");
     else console.log("Can not get Token");
 

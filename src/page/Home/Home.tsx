@@ -1,10 +1,9 @@
-import UseMediaQuery from "../../component/Test/UseMediaQuery"
+import ReactQueryTest from "../../component/Test/ReactQueryTest"
 const Home = () => {
   return (
     <>
-       <UseMediaQuery/>
+       <ReactQueryTest/>
     </>
- 
   )
 }
 

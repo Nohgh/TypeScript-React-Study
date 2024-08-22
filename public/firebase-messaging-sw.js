@@ -10,8 +10,12 @@ self.addEventListener("activate",function(){
 
 self.addEventListener("push", function (e) {
   console.log("push")
-    if (!e.data.json()) return;
-  
+    if (!e.data.json()){
+      console.log("push 알림 내부 data누락");
+      return;
+    } 
+    
+    //push알림으로 들어온 데이터 
     const resultData = e.data.json().notification;
     const notificationTitle = resultData.title;
     const notificationOptions = {
@@ -23,9 +27,11 @@ self.addEventListener("push", function (e) {
     
     console.log("push: ",{resultData,notificationTitle,notificationOptions})
     
+    //알림 push
     self.registration.showNotification(notificationTitle, notificationOptions);
   });
 
+  //push 클릭시 동작
   self.addEventListener("notificationclick", function (event) {
     console.log("notification click");
     const url = "/";
